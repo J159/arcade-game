@@ -82,9 +82,9 @@ class Enemy extends PlayerEnemyConstruct {
 const player = new Player();
 
 // bug variables and containing array
-const bug1 = new Enemy(-101, 0);
-const bug2 = new Enemy(-101, 83);
-const bug3 = new Enemy((-101 * 2.5), 166);
+const bug1 = new Enemy(-101, 0, 200);
+const bug2 = new Enemy(-101, 83, 300);
+const bug3 = new Enemy((-101 * 2.5), 166, 100);
 const allEnemies = [];
 allEnemies.push(bug1, bug2, bug3);
 console.log(allEnemies);
