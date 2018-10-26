@@ -19,6 +19,10 @@ class Player extends PlayerEnemyConstruct {
     // x and y block in reference to ctx.drawImage coordinates
     this.xBlock = 101;
     this.yBlock = 83;
+    this.startX = this.xBlock * 2;
+    this.startY = this.yBlock * 5;
+    this.x = this.startX;
+    this.y = this.startY;
   }
 
   // Direction keys adjust Player movement
