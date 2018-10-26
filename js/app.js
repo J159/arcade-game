@@ -57,6 +57,13 @@ class Enemy extends PlayerEnemyConstruct {
   constructor(x, y) {
     super();
     this.sprite += 'enemy-bug.png';
+    this.xBlock = 101;
+  }
+
+  update(dt) {
+    if (this.x < this.xBlock * 4) {
+      this.x += 20 * dt;
+    }
   }
 }
 
