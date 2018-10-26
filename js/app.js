@@ -61,8 +61,8 @@ class Enemy extends PlayerEnemyConstruct {
   }
 
   update(dt) {
-    if (this.x < this.xBlock * 4) {
-      this.x += 20 * dt;
+    if (this.x < this.xBlock * 5) {
+      this.x += 200 * dt;
     }
   }
 }
