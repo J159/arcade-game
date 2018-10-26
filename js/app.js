@@ -54,11 +54,12 @@ class Player extends PlayerEnemyConstruct {
 }
 
 class Enemy extends PlayerEnemyConstruct {
-  constructor(x, y) {
+  constructor(x, y, speed) {
     super();
     this.sprite += 'enemy-bug.png';
-    this.x = 0;
+    this.x = x;
     this.y = y + 55;
+    this.speed = speed;
     this.xBlock = 101;
     this.boundary = this.xBlock * 5;
     this.resetPos = -this.xBlock;
@@ -66,7 +67,7 @@ class Enemy extends PlayerEnemyConstruct {
 
   update(dt) {
     if (this.x < this.boundary) {
-      this.x += 200 * dt;
+      this.x += this.speed * dt;
     }
     else {
       this.x = this.resetPos;
