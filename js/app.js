@@ -20,7 +20,7 @@ class Player extends PlayerEnemyConstruct {
     this.xBlock = 101;
     this.yBlock = 83;
     this.startX = this.xBlock * 2;
-    this.startY = this.yBlock * 5;
+    this.startY = (this.yBlock * 5) - 20;
     this.x = this.startX;
     this.y = this.startY;
   }
