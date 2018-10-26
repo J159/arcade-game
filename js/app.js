@@ -66,6 +66,11 @@ class Enemy extends PlayerEnemyConstruct {
 
 const player = new Player();
 
+// bug variables and containing array
+const bug1 = new Enemy();
+const allEnemies = [];
+allEnemies.push(bug1);
+
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
