@@ -25,16 +25,16 @@ class Player extends PlayerEnemyConstruct {
   handleInput(input) {
     switch(input) {
       case 'left':
-        this.x -= 20;
+        this.x -= this.xBlock;
         break;
       case 'up':
-        this.y -= 20;
+        this.y -= this.yBlock;
         break;
       case 'right':
-        this.x += 20;
+        this.x += this.xBlock;
         break;
       case 'down':
-        this.y += 20;
+        this.y += this.yBlock;
         break;
     }
   }
