@@ -26,19 +26,28 @@ class Player extends PlayerEnemyConstruct {
   }
 
   // Direction keys adjust Player movement
+  // if statements prevent player from moving off canvas9
   handleInput(input) {
     switch(input) {
       case 'left':
-        this.x -= this.xBlock;
+        if (this.x > 0) {
+          this.x -= this.xBlock;
+        }
         break;
       case 'up':
-        this.y -= this.yBlock;
+        if (this.y > 0) {
+          this.y -= this.yBlock;
+        }
         break;
       case 'right':
-        this.x += this.xBlock;
+        if (this.x < this.yBlock * 4) {
+          this.x += this.xBlock;
+        }
         break;
       case 'down':
-        this.y += this.yBlock;
+        if (this.y < this.yBlock * 4) {
+          this.y += this.yBlock;
+        }
         break;
     }
   }
