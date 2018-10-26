@@ -57,6 +57,8 @@ class Enemy extends PlayerEnemyConstruct {
   constructor(x, y) {
     super();
     this.sprite += 'enemy-bug.png';
+    this.x = 0;
+    this.y = 55;
     this.xBlock = 101;
     this.boundary = this.xBlock * 5;
     this.resetPos = -this.xBlock;
