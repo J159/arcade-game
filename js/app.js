@@ -1,7 +1,7 @@
 // Contructor function for Player and Enemy classes
 class PlayerEnemyConstruct {
   constructor() {
-    // note: asign correct image path per Player and Enemy class
+    // note: asign correct image path per Player/Enemy class
     this.sprite = 'images/';
     this.x = 0;
     this.y = 0;
@@ -58,10 +58,11 @@ class Enemy extends PlayerEnemyConstruct {
     super();
     this.sprite += 'enemy-bug.png';
     this.xBlock = 101;
+    this.boundary = this.xBlock * 5;
   }
 
   update(dt) {
-    if (this.x < this.xBlock * 5) {
+    if (this.x < this.boundary) {
       this.x += 200 * dt;
     }
   }
