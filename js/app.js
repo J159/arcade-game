@@ -26,7 +26,7 @@ class Player extends PlayerEnemyConstruct {
   }
 
   // Direction keys adjust Player movement
-  // if statements prevent player from moving off canvas9
+  // if statements prevent player from moving off canvas
   handleInput(input) {
     switch(input) {
       case 'left':
@@ -50,6 +50,13 @@ class Player extends PlayerEnemyConstruct {
         }
         break;
     }
+  }
+}
+
+class Enemy extends PlayerEnemyConstruct {
+  constructor(x, y) {
+    super();
+    this.sprite += 'enemy-bug.png';
   }
 }
 
