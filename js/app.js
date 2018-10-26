@@ -58,7 +58,7 @@ class Enemy extends PlayerEnemyConstruct {
     super();
     this.sprite += 'enemy-bug.png';
     this.x = 0;
-    this.y = 55;
+    this.y = y + 55;
     this.xBlock = 101;
     this.boundary = this.xBlock * 5;
     this.resetPos = -this.xBlock;
@@ -81,9 +81,12 @@ class Enemy extends PlayerEnemyConstruct {
 const player = new Player();
 
 // bug variables and containing array
-const bug1 = new Enemy();
+const bug1 = new Enemy(-101, 0);
+const bug2 = new Enemy(-101, 83);
+const bug3 = new Enemy((-101 * 2.5), 166);
 const allEnemies = [];
-allEnemies.push(bug1);
+allEnemies.push(bug1, bug2, bug3);
+console.log(allEnemies);
 
 
 // This listens for key presses and sends the keys to your
