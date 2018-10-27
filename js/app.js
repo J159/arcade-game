@@ -52,12 +52,18 @@ class Player extends PlayerEnemyConstruct {
     }
   }
 
+  // Resets player to original position
+  reset() {
+    this.y = this.startY;
+    this.x = this.startX;
+  }
+
   // checks player/enemy collisions
   update() {
     for(let enemy of allEnemies) {
       // When Player x and y coordinates match Enemy class, execute reset
-      if (this.y === enemy.y && (enemy.x + enemy.xBlock > this.x && enemy.x < this.x + this.xBlock)) {
-        console.log('Bam!');
+      if (this.y === enemy.y && (enemy.x + enemy.xBlock/2 > this.x && enemy.x < this.x + this.xBlock/2)) {
+        this.reset();
       }
     }
   }
