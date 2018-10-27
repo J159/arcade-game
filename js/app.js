@@ -55,8 +55,9 @@ class Player extends PlayerEnemyConstruct {
   // checks player/enemy collisions
   update() {
     for(let enemy of allEnemies) {
-      if (this.y === enemy.y) {
-        console.log(enemy);
+      // When Player x and y coordinates match Enemy class, execute reset
+      if (this.y === enemy.y && (enemy.x + enemy.xBlock > this.x && enemy.x < this.x + this.xBlock)) {
+        console.log('Bam!');
       }
     }
   }
