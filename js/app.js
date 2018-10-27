@@ -20,7 +20,7 @@ class Player extends PlayerEnemyConstruct {
     this.xBlock = 101;
     this.yBlock = 83;
     this.startX = this.xBlock * 2;
-    this.startY = (this.yBlock * 5) - 20;
+    this.startY = (this.yBlock * 4) + 55;
     this.x = this.startX;
     this.y = this.startY;
   }
@@ -52,11 +52,16 @@ class Player extends PlayerEnemyConstruct {
     }
   }
 
+  // checks player/enemy collisions
   update() {
     for(let enemy of allEnemies) {
-      console.log(enemy);
+      if (this.y === enemy.y) {
+        console.log(enemy);
+      }
     }
   }
+
+
 }
 
 class Enemy extends PlayerEnemyConstruct {
