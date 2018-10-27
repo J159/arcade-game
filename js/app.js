@@ -113,6 +113,10 @@ const allEnemies = [];
 allEnemies.push(bug1, bug2, bug3);
 console.log(allEnemies);
 
+// Modal variables
+const modal = document.getElementsByClassName('modal')[0];
+const replay = document.querySelector('button');
+
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
