@@ -1,4 +1,4 @@
-// Contructor function for Player and Enemy classes
+// Contructor for Player and Enemy classes
 class PlayerEnemyConstruct {
   constructor() {
     // note: asign correct image path per Player/Enemy class
@@ -49,6 +49,12 @@ class Player extends PlayerEnemyConstruct {
           this.y += this.yBlock;
         }
         break;
+    }
+  }
+
+  update() {
+    for(let enemy of allEnemies) {
+      console.log(enemy);
     }
   }
 }
