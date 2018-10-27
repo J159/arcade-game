@@ -67,7 +67,7 @@ class Player extends PlayerEnemyConstruct {
         this.reset();
       }
     }
-    // Check if player reached final tile
+    // Check if player reached final tile. If so, set win property to true.
     if (this.y < 1) {
       console.log('Win!');
       this.win = true;
@@ -119,6 +119,13 @@ console.log(allEnemies);
 // Modal variables
 const modal = document.getElementsByClassName('modal')[0];
 const replay = document.querySelector('button');
+
+// Event Listener for modal "Play Again" button
+replay.addEventListener('click', function() {
+  modal.style.display = 'none';
+  player.reset();
+  player.win = false;
+})
 
 
 // This listens for key presses and sends the keys to your
