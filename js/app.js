@@ -23,6 +23,7 @@ class Player extends PlayerEnemyConstruct {
     this.startY = (this.yBlock * 4) + 55;
     this.x = this.startX;
     this.y = this.startY;
+    this.win = false;
   }
 
   // Direction keys adjust Player movement
@@ -69,6 +70,7 @@ class Player extends PlayerEnemyConstruct {
     // Check if player reached final tile
     if (this.y < 1) {
       console.log('Win!');
+      this.win = true;
     }
   }
 
