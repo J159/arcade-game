@@ -72,9 +72,12 @@ class Player extends PlayerEnemyConstruct {
       console.log('Win!');
       this.win = true;
     }
+    // If game is won, display modal
+    if (player.win === true) {
+      console.log('Game Over');
+      modal.style.display = 'block';
+    }
   }
-
-
 }
 
 class Enemy extends PlayerEnemyConstruct {
