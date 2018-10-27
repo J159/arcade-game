@@ -58,13 +58,17 @@ class Player extends PlayerEnemyConstruct {
     this.x = this.startX;
   }
 
-  // checks player/enemy collisions
+  // Checks player/enemy collisions
   update() {
     for(let enemy of allEnemies) {
-      // When Player x and y coordinates match Enemy class, execute reset
+      // When Player x and y coordinates match Enemy class, execute reset function
       if (this.y === enemy.y && (enemy.x + enemy.xBlock/2 > this.x && enemy.x < this.x + this.xBlock/2)) {
         this.reset();
       }
+    }
+    // Check if player reached final tile
+    if (this.y < 1) {
+      console.log('Win!');
     }
   }
 
