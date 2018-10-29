@@ -7,11 +7,13 @@ class PlayerEnemyConstruct {
     this.y = 0;
   }
 
+  // Provided render function, draws image on canvas
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
 }
 
+// Player class
 class Player extends PlayerEnemyConstruct {
   constructor() {
     super();
@@ -27,7 +29,7 @@ class Player extends PlayerEnemyConstruct {
   }
 
   // Direction keys adjust Player movement
-  // if statements prevent player from moving off canvas
+  // if statements prevents player from moving off canvas
   handleInput(input) {
     switch(input) {
       case 'left':
@@ -53,7 +55,7 @@ class Player extends PlayerEnemyConstruct {
     }
   }
 
-  // Resets player to original position
+  // Resets player to starting position
   reset() {
     this.y = this.startY;
     this.x = this.startX;
@@ -78,6 +80,7 @@ class Player extends PlayerEnemyConstruct {
   }
 }
 
+// Enemy class
 class Enemy extends PlayerEnemyConstruct {
   constructor(x, y, speed) {
     super();
@@ -90,6 +93,7 @@ class Enemy extends PlayerEnemyConstruct {
     this.resetPos = -this.xBlock;
   }
 
+  // When Enemy moves fully off canvas, resets back to original starting position, loops indefinitely
   update(dt) {
     if (this.x < this.boundary) {
       this.x += this.speed * dt;
@@ -100,17 +104,17 @@ class Enemy extends PlayerEnemyConstruct {
   }
 }
 
-// Now instantiate your objects.
-// Place all enemy objects in an array called allEnemies
-// Place the player object in a variable called player
-
+// Player variable
 const player = new Player();
 
-// bug variables and containing array
+// bug variables
 const bug1 = new Enemy(-101, 0, 200);
 const bug2 = new Enemy(-101, 83, 300);
 const bug3 = new Enemy((-101 * 2.5), 166, 100);
+
+// array to hold bug variables
 const allEnemies = [];
+// push bugs into array
 allEnemies.push(bug1, bug2, bug3);
 
 // Modal variables
@@ -123,7 +127,6 @@ replay.addEventListener('click', function() {
   player.reset();
   player.win = false;
 })
-
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
