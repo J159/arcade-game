@@ -69,12 +69,10 @@ class Player extends PlayerEnemyConstruct {
     }
     // Check if player reached final tile. If so, set win property to true.
     if (this.y < 1) {
-      console.log('Win!');
       this.win = true;
     }
     // If game is won, display modal
     if (player.win === true) {
-      console.log('Game Over');
       modal.style.display = 'block';
     }
   }
@@ -114,7 +112,6 @@ const bug2 = new Enemy(-101, 83, 300);
 const bug3 = new Enemy((-101 * 2.5), 166, 100);
 const allEnemies = [];
 allEnemies.push(bug1, bug2, bug3);
-console.log(allEnemies);
 
 // Modal variables
 const modal = document.getElementsByClassName('modal')[0];
