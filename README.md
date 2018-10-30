@@ -5,7 +5,7 @@ Arcade Game!
 
 Project 3 Arcade Game - Udacity Front End Web Development Nanodegree.
 
-Built using HTML, CSS, JavaScript, and HTML5 Canvas, with a focus on Object-Oriented Javascript. HTML5 Canvas Code, art assets, and engine/resources.js provided by Udacity.
+Built using HTML, CSS, JavaScript, and HTML5 Canvas, with a focus on Object-Oriented Javascript. HTML5 Canvas, art assets, and engine/resources.js provided by Udacity.
 
 ## How To Play
 
